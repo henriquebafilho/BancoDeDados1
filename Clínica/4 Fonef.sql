@@ -1,0 +1,13 @@
+
+CREATE TABLE fonef (
+  IDFUNC int(11) NOT NULL,
+  NUM char(15) NOT NULL,
+  TIPO char(20) NOT NULL,
+  PRIMARY KEY (IDFUNC,NUM,TIPO),
+  CONSTRAINT ChaveEstrangeiraFonef   FOREIGN KEY (IDFUNC) REFERENCES funcionario (IDFUNC) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB ;
+
+
+insert into fonef(IDFUNC,NUM,TIPO) values (100,'20056789','RESIDENCIAL');
+insert into fonef(IDFUNC,NUM,TIPO) values (100,'88998787','CELULAR');
+insert into fonef(IDFUNC,NUM,TIPO) values (120,'99998787','FAX');

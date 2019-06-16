@@ -1,0 +1,15 @@
+
+
+CREATE TABLE fe (
+  IDFUNC int(11) NOT NULL,
+  IDESP int(11) NOT NULL,
+  PRIMARY KEY (IDFUNC,IDESP),
+  CONSTRAINT ChaveEstrangeiraFunc FOREIGN KEY (IDFUNC) REFERENCES funcionario (IDFUNC) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT ChaveEstrangeiraEspe FOREIGN KEY (IDESP) REFERENCES especialidade (IDESP) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB ;
+
+
+insert into fe(IDFUNC,IDESP) values (100,2);
+insert into fe(IDFUNC,IDESP) values (120,3);
+insert into fe(IDFUNC,IDESP) values (120,1);
+insert into fe(IDFUNC,IDESP) values (160,1);
